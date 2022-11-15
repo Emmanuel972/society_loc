@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :games, only: [:index, :show, :new, :create] do
-
-  resources :locations, only: [:index, :show, :new, :create]
+    resources :locations, only: [:index, :show, :new, :create]
   end
 end
