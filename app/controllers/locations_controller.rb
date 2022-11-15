@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   before_action :set_location, only: [:show]
   def index
     @user = current_user
-    @locations = Location.where(@user == :user)
+    @locations = Location.all
   end
 
   def show
