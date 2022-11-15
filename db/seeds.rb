@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 # db/seeds.rb
 puts "Cleaning database..."
 Game.destroy_all
@@ -26,3 +27,4 @@ control = {"control", description: "Control est un jeu de cartes dans lequel les
   puts "Created #{game.name}"
 end
 puts "Finished!"
+

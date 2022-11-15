@@ -1,5 +1,12 @@
 <div class="container">
-  <% locations.each do |location| %>
-    <%= link_to location.name, restaurant_path(@restaurant) %>
-    <% end %>
+  <div class="text-center">
+    <h1>Your locations</h1>
+  </div>
+  <div class="d-flex justify-content-center rounded shadow p-3 bg-light">
+    <ul>
+      <% @locations.each do |location| %>
+        <li><%= link_to location.name, location_path(@location) %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

@@ -1,0 +1,8 @@
+<div class="container"></div>
+  <%= simple_form_for [@game, @location] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :start %>
+    <%= f.input :end %>
+    <%= f.submit "Louer", class: "btn btn-primary" %>
+  <% end %>
+</div>
