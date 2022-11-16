@@ -9,13 +9,18 @@ class LocationsController < ApplicationController
   end
 
   def new
+    @game = Game.find(params[:game_id])
     @location = Location.new
   end
 
   def create
-    @location = Location.new(location_params)
+    @game = Game.find(params[:game_id])
+    arg = location_params
+    arg[:user_id] = current_user.id
+    arg[:game_id] = params[:game_id]
+    @location = Location.new(arg)
     if @location.save
-      relocate_to locations_path
+      redirect_to locations_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,10 +29,10 @@ class LocationsController < ApplicationController
   private
 
   def set_location
-    @location = Location.find(params[:location_id])
+    @location = Location.find(params[:id])
   end
 
   def location_params
-    params.require(:location).permit(:name, :game_id, :user_id, :start, :end)
+    params.require(:location).permit(:name, :start, :end)
   end
 end

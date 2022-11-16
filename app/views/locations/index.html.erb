@@ -1,12 +1,14 @@
 <div class="container">
   <div class="text-center">
-    <h1>Your locations</h1>
+    <h1 class="fw-bold">Mes locations</h1>
   </div>
   <div class="d-flex justify-content-center rounded shadow p-3 bg-light">
-    <ul>
-      <% @locations.each do |location| %>
-        <li><%= link_to location.name, location_path(@location) %></li>
-      <% end %>
-    </ul>
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <% @locations.each do |location| %>
+          <li class="list-group-item"><%= link_to location.name, "/games/#{location.game.id}/locations/#{location.id}",class:"btn  text-decoration-none text-black" %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

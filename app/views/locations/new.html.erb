@@ -1,8 +1,11 @@
-<div class="container"></div>
+<div class="container">
+<h1 class="text-center fw-bold">Location du jeu <%= @game.name %></h1>
   <%= simple_form_for [@game, @location] do |f| %>
     <%= f.input :name %>
     <%= f.input :start %>
     <%= f.input :end %>
-    <%= f.submit "Louer", class: "btn btn-primary" %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Louer", class: "btn btn-primary  px-5" %>
+    </div>
   <% end %>
 </div>
