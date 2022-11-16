@@ -11,16 +11,17 @@ puts "Cleaning database..."
 Game.destroy_all
 
 puts "Creating games..."
-bios = {name: "bios :Mesofouna ", description: "Bios : Mesofauna fait partie de la série de jeux Bios. Il s'agit d'une version plus accessible de Bios : Megafau..."}
-insolito = {name: "insolito", description: "Constituez deux équipes de choc et affrontez-vous à base de questions aussi improbables que farfelues."}
-old = {name: "old_london_ridge", description: "Old London Bridge est un jeu de placement d'ouvrier dans lequel vous devez reconstruire le pont de Londr..."}
-punto = {name: "punto", description: "Punto est un jeu de cartes dans lequel les joueurs doivent poser 4 cartes de la même couleur dans le bu..."}
-las_vegas = {name: "las vegas", description: "Dans Las Vegas, placez astucieusement vos dés pour essayer de remporter un maximum de cash sous le n..."}
-vilainous = {name: "vilaious", description: "Villainous est un jeu de société qui vous met dans la peau de méchants emblématiques, bien décidés à re..."}
-tres_fute = {name: "trés_futé", description: "Très futé est un jeu de dés, de combinaisons et de prise de risque. Lancez les dés et cochez les bonnes..."}
-esquisse = {name: "esquissé ?", description: "Esquissé ? est LE jeu d’ambiance par excellence. Basé sur le principe du téléphone arabe, le jeu trouve son o..."}
-gold = {name: "gold", description: "Dans ce jeu de mémoire amusant, vous vous glissez dans la peau de chercheurs d’or et tentez d’en récup..."}
-control = {name: "control", description: "Control est un jeu de cartes dans lequel les joueurs incarnent des voyageurs dans le temps qui ont été pri..."}
+
+bios = {name: "Bios :Mesofouna ", description: "Bios : Mesofauna fait partie de la série de jeux Bios. Il s'agit d'une version plus accessible de Bios : Megafau..."}
+insolito = {name: "Insolito", description: "Constituez deux équipes de choc et affrontez-vous à base de questions aussi improbables que farfelues."}
+old = {name: "Old london ridge", description: "Old London Bridge est un jeu de placement d'ouvrier dans lequel vous devez reconstruire le pont de Londr..."}
+punto = {name: "Punto", description: "Punto est un jeu de cartes dans lequel les joueurs doivent poser 4 cartes de la même couleur dans le bu..."}
+las_vegas = {name: "Las Vegas", description: "Dans Las Vegas, placez astucieusement vos dés pour essayer de remporter un maximum de cash sous le n..."}
+vilainous = {name: "Vilaious", description: "Villainous est un jeu de société qui vous met dans la peau de méchants emblématiques, bien décidés à re..."}
+tres_fute = {name: "Trés futé", description: "Très futé est un jeu de dés, de combinaisons et de prise de risque. Lancez les dés et cochez les bonnes..."}
+esquisse = {name: "Esquissé ?", description: "Esquissé ? est LE jeu d’ambiance par excellence. Basé sur le principe du téléphone arabe, le jeu trouve son o..."}
+gold = {name: "Gold", description: "Dans ce jeu de mémoire amusant, vous vous glissez dans la peau de chercheurs d’or et tentez d’en récup..."}
+control = {name: "Control", description: "Control est un jeu de cartes dans lequel les joueurs incarnent des voyageurs dans le temps qui ont été pri..."}
 
 [bios, insolito, old, punto, las_vegas, vilainous, tres_fute, esquisse, gold, control].each do |attributes|
   game = Game.create!(attributes)

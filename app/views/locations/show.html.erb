@@ -1,18 +1,17 @@
 <div class="container">
   <div class="text-center">
-    <h1>Your location</h1>
+    <h1 class="fw-bold">Ma location</h1>
     <h2><%= @location.name %></h2>
   </div>
-  <div class="d-flex justify-content-center rounded shadow p-3 bg-light">
-    <ul>
-      <% @games.each do |game| %>
-        <li>
-          <div class="d-flex justify-content-between">
-            <%= link_to game.name, location_path(@game) %>
-            <%= "loué du #{@location.start} au #{@location.end}" %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
+  <div class="rounded shadow p-3 bg-light">
+    <div class="text-center">
+    <h2><%= @location.game.name %></h2>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="w-50">
+        <p><%= @location.game.description %></p>
+      </div>
+      <p class="d-flex align-items-end fw-bold"><%= "du #{@location.start} au #{@location.end}" %></p>
+    </div>
   </div>
 </div>
