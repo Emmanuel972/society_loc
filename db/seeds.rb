@@ -11,6 +11,7 @@ puts "Cleaning database..."
 Game.destroy_all
 
 puts "Creating games..."
+
 bios = {name: "Bios :Mesofouna ", description: "Bios : Mesofauna fait partie de la série de jeux Bios. Il s'agit d'une version plus accessible de Bios : Megafau..."}
 insolito = {name: "Insolito", description: "Constituez deux équipes de choc et affrontez-vous à base de questions aussi improbables que farfelues."}
 old = {name: "Old london ridge", description: "Old London Bridge est un jeu de placement d'ouvrier dans lequel vous devez reconstruire le pont de Londr..."}
