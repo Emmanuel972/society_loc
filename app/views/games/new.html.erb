@@ -1,6 +1,15 @@
-<%= simple_form_for @games do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
-
+<style>
+body{
+  background-color: #FFFFFF		;
+}
+</style>
+<div class="container">
+<h1 class="text-center"><strong>Nouveau jeu</strong></h1>
+  <%= simple_form_for @game do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :picture, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
+</div>
