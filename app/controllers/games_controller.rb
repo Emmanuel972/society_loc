@@ -1,10 +1,10 @@
 class GamesController < ApplicationController
+  before_action :set_game, only: [:show]
   def index
     @games = Game.all
   end
 
   def show
-    @game = Game.find(params[:id])
   end
 
   def new
@@ -23,7 +23,7 @@ class GamesController < ApplicationController
   private
 
   def set_game
-    @game = game.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def game_params

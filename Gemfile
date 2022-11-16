@@ -79,3 +79,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Use Cloudinary for load image
+gem 'cloudinary'
+# Protect my api key rails
+gem "dotenv-rails", groups: [:development, :test]
