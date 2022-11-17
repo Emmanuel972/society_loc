@@ -13,7 +13,7 @@ Game.destroy_all
 
 puts "Creating games..."
 
-bios = {name: "Bios :Mesofouna ", description: "Bios : Mesofauna fait partie de la série de jeux Bios. Il s'agit d'une version plus accessible de Bios : Megafau...", picture: 'https://res.cloudinary.com/dikisdh8l/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1668690318/development/bios-mesofauna_z8a8lr.jpg' }
+bios = {name: "Bios :Mesofouna ", description: "Bios : Mesofauna fait partie de la série de jeux Bios. Il s'agit d'une version plus accessible de Bios : Megafau..."}
 insolito = {name: "Insolito", description: "Constituez deux équipes de choc et affrontez-vous à base de questions aussi improbables que farfelues."}
 old = {name: "Old london ridge", description: "Old London Bridge est un jeu de placement d'ouvrier dans lequel vous devez reconstruire le pont de Londr..."}
 punto = {name: "Punto", description: "Punto est un jeu de cartes dans lequel les joueurs doivent poser 4 cartes de la même couleur dans le bu..."}
