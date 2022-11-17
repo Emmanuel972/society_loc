@@ -13,7 +13,9 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(game_params)
+    arg = game_params
+    arg[:user_id] = current_user.id
+    @game = Game.new(arg)
     if @game.save!
       redirect_to game_path(@game)
     else

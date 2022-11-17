@@ -1,17 +1,10 @@
-<div class="container">
-  <h1 class="text-center p-5">Society_loc</h1>
-  <div class="d-flex justify-content-center p-3">
-    <ul class= "list-group">
+<div class="container text-center">
+  <h1 class="p-5">Society_loc</h1>
+  <div class="text-center p-3">
+    <div class="row row-col-3">
       <% @games.each do |game| %>
-        <li>
-          <div class="card m-3" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-              <div class="card-body d-flex justify-content-center">
-                <%= link_to game.name, game_path(game), class:"btn btn-success" %>
-              </div>
-          </div>
-        </li>
+        <%= render "composents/game_card", game: game %>
       <% end %>
-    </ul>
+    </div>
   </div>
 </div>
