@@ -1,0 +1,8 @@
+  <%= simple_form_for [game, location] do |f| %>
+    <%= f.input :name, label: "Nom" %>
+    <%= f.input :start, label: "Début"%>
+    <%= f.input :end, label: "Fin"%>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Louer", class: "btn btn-primary px-5" %>
+    </div>
+  <% end %>
