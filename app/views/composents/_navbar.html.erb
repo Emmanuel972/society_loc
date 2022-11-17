@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://media.istockphoto.com/id/1132091114/fr/photo/red-casino-d%C3%A9s.jpg?s=612x612&w=0&k=20&c=i8AdztYfWWo--_LzotMtPcfOj_tAP4pvg6cfBgkR1jE=" %>
@@ -17,6 +17,9 @@
           <li class="nav-item">
             <%= link_to "Mes locations", locations_path, class: "nav-link" %>
           </li>
+          <li>
+            <p class="nav-link text-body fw-bold"><%= current_user.user_name %></p>
+          </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -34,4 +37,3 @@
     </div>
   </div>
 </div>
-

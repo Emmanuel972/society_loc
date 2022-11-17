@@ -1,0 +1,9 @@
+<div class="card-product m-3">
+  <%= cl_image_tag location.game.picture.key, width: 120; %>
+  <div class="card-product-infos">
+    <h2><%= "Du #{location.start} au #{location.end}" %></h2>
+    <div class="d-flex">
+    <p><%= location.game.name %></p>
+    </div>
+  </div>
+</div>

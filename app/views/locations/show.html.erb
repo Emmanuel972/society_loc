@@ -3,15 +3,29 @@
     <h1 class="fw-bold">Ma location</h1>
     <h2 class="text-capitalize"><%= @location.name %></h2>
   </div>
-  <div class="rounded shadow p-3 bg-light">
+
+<div class="card mb-3">
+<p class="card-text text-end"><small class="text-muted"><%= "Du #{@location.start} au #{@location.end}" %></small></p>
+  <%= cl_image_tag @location.game.picture.key, crop: :fill, class:"img-fluid card-body" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= @location.game.name %></h5>
+    <p class="card-text"><%= @location.game.description %></p>
+  </div>
+</div>
+
+  <!--div class="rounded shadow p-3 bg-light">
     <div class="text-center">
-    <h2><%= @location.game.name %></h2>
+    <h2></h2>
     </div>
     <div class="d-flex justify-content-between">
-      <div class="w-50">
-        <p><%= @location.game.description %></p>
-      </div>
-      <p class="d-flex align-items-end fw-bold"><%= "du #{@location.start} au #{@location.end}" %></p>
+    <div class="w-33">
+
+    </div>
+      <div class="rounded shadow p-3 bg-light">
+
+        <p</p>
+
     </div>
   </div>
+  </div-->
 </div>
