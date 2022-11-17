@@ -1,10 +1,13 @@
 <div class="container">
-  <h1 class="text-center p-5 fw-bold"><%= @game.name %></h1>
-      <h2 class="text-center fw-bold">Description</h2>
-  <div class="d-flex justify-content-center p-3">
-    <div class="w-50">
+  <h1 class="text-center pt-5 fw-bold"><%= @game.name %></h1>
+    <div class="d-flex justify-content-end">
+      <%= link_to "Loué", new_game_location_path(@game), class:"btn btn-success mx-2 mb-2" %>
+      <%= link_to "Modifier", edit_game_path(@game), class:"btn btn-primary mx-2 mb-2" %>
+    </div>
+  <div class="d-flex justify-content-center">
+    <div class="w-75">
       <div class="rounded shadow p-3 bg-light">
-      <%= cl_image_tag @game.picture.key, height: 500, width: 500, crop: :fill %>
+        <%= cl_image_tag @game.picture.key, crop: :fill, class:"img-fluid" %>
         <p><%= @game.description %></p>
       </div>
     </div>
