@@ -30,13 +30,11 @@ class GamesController < ApplicationController
   end
 
   def destroy
-
   end
 
   private
 
   def set_game
-    #@game = Game.find(params[:game_id])
     @game = Game.find(params[:id])
   end
 
