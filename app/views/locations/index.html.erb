@@ -2,13 +2,15 @@
   <div class="text-center">
     <h1 class="fw-bold">Mes locations</h1>
   </div>
-  <div class="d-flex justify-content-center rounded shadow p-3 bg-light">
-    <div class="card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <% @locations.each do |location| %>
-          <li class="list-group-item"><%= link_to location.name, "/games/#{location.game.id}/locations/#{location.id}",class:"btn  text-decoration-none text-black" %></li>
-        <% end %>
-      </ul>
+  <div class="d-flex justify-content-center">
+    <div class="w-25 rounded shadow p-3 bg-light">
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <% @locations.each do |location| %>
+            <li class="list-group-item text-center "><%= link_to location.name, "/games/#{location.game.id}/locations/#{location.id}",class:"btn  text-decoration-none text-white bg-primary fw-bold px-5 text-capitalize" %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

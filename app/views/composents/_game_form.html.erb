@@ -1,0 +1,8 @@
+<%= simple_form_for game do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :picture, as: :file %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Ajouter", class: "btn btn-primary" %>
+    </div>
+  <% end %>

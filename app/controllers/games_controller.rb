@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show]
-  
+  before_action :set_game, only: [:show, :edit, :update]
+
   def index
     @games = Game.all
   end
@@ -19,6 +19,18 @@ class GamesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @game.update(game_params)
+    redirect_to game_path(@game)
+  end
+
+  def destroy
+
   end
 
   private
