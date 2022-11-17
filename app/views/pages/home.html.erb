@@ -2,6 +2,8 @@
   <div class="container">
     <h1 class="text-light text-center p-3 fw-bold">Society Loc</h1>
     <p class="text-light p-3">Louer des jeux de société pour des soirées entre amis.</p>
-    <%= link_to "Liste des jeux", games_path, class:"btn btn-flat btn-secondary mx-3" %>
+    <% unless user_signed_in? %>
+    <%= link_to "S'inscrire", games_path, class:"btn btn-flat btn-primary mx-3" %>
+    <% end %>
 <div style="margin-left: 15%; margin-right: 15%;"><p><h2 class="text-light text-center">Society Loc te permet de louer et d’acheter des jeux simplement et rapidement !</div>
 </div>

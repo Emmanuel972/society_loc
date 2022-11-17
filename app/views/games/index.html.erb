@@ -4,7 +4,6 @@
   <div class="text-center p-3">
     <div class="row row-col-3">
       <% @games.each do |game| %>
-
         <div class="col m-3">
           <%= link_to  game_path(game) do %>
           <%= render "composents/game_card", game: game %>
