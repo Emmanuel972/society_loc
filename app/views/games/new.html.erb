@@ -1,15 +1,8 @@
-<style>
-body{
-  background-color: #FFFFFF		;
-}
-</style>
 <div class="container">
-<h1 class="text-center"><strong>Nouveau jeu</strong></h1>
-  <%= simple_form_for @game do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :picture, as: :file %>
-    <%= f.submit %>
-  <% end %>
-</div>
+  <h1 class="text-center fw-bold">Nouveau jeu</h1>
+  <div class="d-flex justify-content-center">
+    <div class="w-50 bg-light shadow rounded p-3">
+      <%= render "composents/game_form", game: @game %>
+    </div>
+  </div>
 </div>
