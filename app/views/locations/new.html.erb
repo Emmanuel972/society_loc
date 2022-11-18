@@ -1,4 +1,11 @@
 <div class="container">
 <h1 class="text-center fw-bold">Location du jeu <%= @game.name %></h1>
-  <%= render "composents/location_form", game: @game, location: @location %>
+  <%= simple_form_for [@game, @location] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :start, as: :date, html5: true %>
+    <%= f.input :end, as: :date, html5: true %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Louer", class: "btn btn-primary px-5" %>
+    </div>
+  <% end %>
 </div>

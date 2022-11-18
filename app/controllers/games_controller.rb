@@ -14,8 +14,9 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
-    if @game.save!
-      redirect_to game_path(@game)
+    @game.user = current_user
+    if @game.save
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,13 +31,15 @@ class GamesController < ApplicationController
   end
 
   def destroy
+  end
 
+  def user_games
+    @games = Game.where(user:current_user)
   end
 
   private
 
   def set_game
-    #@game = Game.find(params[:game_id])
     @game = Game.find(params[:id])
   end
 
