@@ -33,6 +33,10 @@ class GamesController < ApplicationController
   def destroy
   end
 
+  def user_games
+    @games = Game.where(user:current_user)
+  end
+
   private
 
   def set_game
