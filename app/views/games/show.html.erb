@@ -1,9 +1,11 @@
 <div class="container">
   <h1 class="text-center pt-5 fw-bold"><%= @game.name %></h1>
     <div class="d-flex justify-content-end">
-      <%= link_to "Louez le jeu", new_game_location_path(@game), class:"btn btn-success mx-2 mb-2" %>
+      <%= link_to "Louer le jeu", new_game_location_path(@game), class:"btn btn-success mx-2 mb-2" %>
       <% if current_user == @game.user %>
       <%= link_to "Modifier", edit_game_path(@game), class:"btn btn-primary mx-2 mb-2" %>
+      <%= link_to "Supprimer", game_path(@game), data: {turbo_method: :delete, turbo_confirm: "Etes vous certain?"}, class:"btn btn-danger mx-2 mb-2" %>
+
       <% end %>
     </div>
   <div class="d-flex justify-content-center">
